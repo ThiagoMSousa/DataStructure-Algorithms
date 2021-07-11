@@ -37,8 +37,17 @@ public class VectorOrdered {
         }
         vector[position] = number;
         lastPosition += 1;
+    }
 
-
+    public int search(int number){
+        int result = -1;
+        for ( int i=0; i < vector.length; i++ ){
+            if (vector[i] == number){
+                result = i;
+                break;
+            }
+        }
+        return result;
     }
 
     // Big O = O(n)

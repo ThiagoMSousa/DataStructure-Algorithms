@@ -37,6 +37,8 @@ public class VectorOrderedApplicationMain {
         vectorOrdered.insertVector(13);
         vectorOrdered.printVector();
 
+        System.out.println("\n");
+        System.out.println( vectorOrdered.search(1) );
 
     }
 }
