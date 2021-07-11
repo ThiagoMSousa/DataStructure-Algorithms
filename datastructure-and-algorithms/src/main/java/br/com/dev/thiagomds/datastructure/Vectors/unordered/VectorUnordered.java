@@ -45,6 +45,7 @@ public class VectorUnordered {
         else{
             for (int i=position; i < lastPosition; i++){
                 vector[i] = vector[i+1];
+                vector[i+1] = 0;
             }
             lastPosition -= 1;
         }
