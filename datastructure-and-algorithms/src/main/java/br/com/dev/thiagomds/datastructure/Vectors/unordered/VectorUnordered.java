@@ -10,6 +10,7 @@ public class VectorUnordered {
     private static int lastPosition;
     private static int capacity;
 
+    // Big O = O(n)
     public int[] createVector(int size){
         lastPosition = -1;
         capacity = size;
@@ -37,12 +38,25 @@ public class VectorUnordered {
         return result;
     }
 
-    public void printVector(int vector[]){
+    public int delete(int number){
+        int position = search(number);
+
+        if(position == -1) return position;
+        else{
+            for (int i=position; i < lastPosition; i++){
+                vector[i] = vector[i+1];
+            }
+            lastPosition -= 1;
+        }
+        return position;
+    }
+
+    public void printVector(){
         if (lastPosition == -1)
             System.out.println("Vector is Empty !!!");
         else {
             for (int i=0; i < vector.length; i++) {
-                System.out.printf("%sº Position: %s \n", (i+1), vector[i]);
+                System.out.printf("%sº Position: %s \n", (i), vector[i]);
             }
         }
     }
