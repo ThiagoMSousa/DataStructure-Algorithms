@@ -50,6 +50,21 @@ public class VectorOrdered {
         return result;
     }
 
+    public int delete(int number){
+        int position = search(number);
+
+        if(position == -1) return position;
+        else{
+            for (int i=position; i < lastPosition; i++){
+                vector[i] = vector[i+1];
+                vector[i+1] = 0;
+            }
+            lastPosition -= 1;
+        }
+        return position;
+    }
+
+
     // Big O = O(n)
     public void printVector(){
         if (lastPosition == -1)

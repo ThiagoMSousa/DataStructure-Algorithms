@@ -38,7 +38,11 @@ public class VectorOrderedApplicationMain {
         vectorOrdered.printVector();
 
         System.out.println("\n");
-        System.out.println( vectorOrdered.search(1) );
+        System.out.println( "Position: " + vectorOrdered.search(15) );
+
+        vectorOrdered.delete(10);
+        vectorOrdered.delete(3);
+        vectorOrdered.printVector();
 
     }
 }
