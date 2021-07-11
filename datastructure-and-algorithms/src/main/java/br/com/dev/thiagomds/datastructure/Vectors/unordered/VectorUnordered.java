@@ -16,6 +16,7 @@ public class VectorUnordered {
         return vector = new int[size];
     }
 
+    // BIG O =  O(1) - O(2)
     public void insertVector(int number){
         if (lastPosition == (capacity - 1)){
             System.out.println( "Maximum Capacity Reached" );
@@ -24,6 +25,16 @@ public class VectorUnordered {
             lastPosition++;
             vector[lastPosition] = number;
         }
+    }
+
+    // BIG O = O(n)
+    public int search(int number){
+        int result = -1;
+
+        for (int i=0; i < vector.length; i++){
+            if(number == vector[i]) result = i;
+        }
+        return result;
     }
 
     public void printVector(int vector[]){

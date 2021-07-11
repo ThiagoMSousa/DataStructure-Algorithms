@@ -17,8 +17,9 @@ public class VectorUnorderedApplicationMain {
         vectorUnordered.insertVector(1);
 
         vectorUnordered.printVector(vector);
-        
         vectorUnordered.insertVector(7);
+
+        System.out.println( "Position: " + vectorUnordered.search(3) );
 
     }
 }
