@@ -38,6 +38,7 @@ public class BinarySearch {
         lastPosition += 1;
     }
 
+    // Big O = Log(n)
     public static int binarySearchIterative(int number) {
         int begin = 0;
         int end = vector.length - 1;
