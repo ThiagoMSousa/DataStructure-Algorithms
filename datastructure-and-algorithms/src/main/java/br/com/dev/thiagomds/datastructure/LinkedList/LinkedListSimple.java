@@ -39,4 +39,23 @@ public class LinkedListSimple {
         first = getFirst().getNext();
         return popNode;
     }
+
+    public Node search(int value){
+        if (getFirst() == null){
+            System.out.println("Empty List");
+            return null;
+        }
+        Node nodeCurrent = getFirst();
+        while (nodeCurrent.getValue() != value){
+            if (nodeCurrent.getNext() == null){
+                System.out.println("Element Not Found !");
+                return null;
+            }
+            else{
+                nodeCurrent = nodeCurrent.getNext();
+            }
+        }
+        System.out.println("Element Found !");
+        return nodeCurrent;
+    }
 }

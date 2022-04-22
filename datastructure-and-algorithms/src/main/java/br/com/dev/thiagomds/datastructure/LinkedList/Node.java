@@ -18,7 +18,15 @@ public class Node {
         this.next = next;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public Node getNext(){
         return next;
+    }
+
+    public int getValue() {
+        return value;
     }
 }

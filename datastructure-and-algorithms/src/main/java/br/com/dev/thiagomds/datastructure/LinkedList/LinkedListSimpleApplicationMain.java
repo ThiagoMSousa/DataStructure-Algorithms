@@ -59,6 +59,18 @@ public class LinkedListSimpleApplicationMain {
         list.print();
 
         System.out.println("\n");
-        System.out.println( list.getFirst() );
+        //System.out.println( list.getFirst() );
+
+
+        list.push(2);
+        list.push(3);
+        list.push(4);
+        list.push(5);
+
+        list.print();
+        System.out.println("\nSearch Number ...");
+        list.search(3);
+        list.search(9);
+
     }
 }
