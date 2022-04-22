@@ -58,4 +58,30 @@ public class LinkedListSimple {
         System.out.println("Element Found !");
         return nodeCurrent;
     }
+
+    public Node popForPosition(int value){
+        if (getFirst() == null){
+            System.out.println("Empty List");
+            return null;
+        }
+
+        Node nodeCurrent = getFirst();
+        Node nodePrevious = getFirst();
+
+        while (nodeCurrent.getValue() != value){
+            if (nodeCurrent.getNext() == null){
+                System.out.println("Element Not Found !");
+                return null;
+            }
+            else{
+                nodePrevious = nodeCurrent;
+                nodeCurrent = nodeCurrent.getNext();
+            }
+        }
+        if (nodeCurrent == getFirst()) first = getFirst().getNext();
+        else {
+            nodePrevious.setNext( nodeCurrent.getNext() );
+        }
+        return nodeCurrent;
+    }
 }

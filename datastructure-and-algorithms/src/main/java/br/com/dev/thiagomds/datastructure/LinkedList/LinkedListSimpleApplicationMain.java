@@ -68,9 +68,18 @@ public class LinkedListSimpleApplicationMain {
         list.push(5);
 
         list.print();
-        System.out.println("\nSearch Number ...");
+        System.out.println("\nSearch Element ...");
         list.search(3);
         list.search(9);
+
+        list.print();
+        System.out.println("\nDeleting Element ...");
+        list.popForPosition(2);
+        list.print();
+
+        System.out.println("\n");
+        list.popForPosition(5);
+        list.print();
 
     }
 }
